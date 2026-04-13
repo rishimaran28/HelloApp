@@ -1,17 +1,14 @@
-public class UC6 {
+public class UC7 {
+
     public static void main(String[] args) {
-        String result = "Hello ";
 
-        // Append each argument followed by a delimiter
-        for (int i = 0; i < args.length; i++) {
-            result = result + args[i] + ", ";
-        }
-
-        // Remove trailing delimiter if at least one argument was added
         if (args.length > 0) {
-            result = result.substring(0, result.length() - 2); // remove last ", "
+            // Join all command-line arguments with a space
+            String joined = String.join(" ", args);  // uses String.join()[web:16]
+            System.out.println("Hello " + joined);
+        } else {
+            // Default message when there are no arguments
+            System.out.println("Hello World");
         }
-
-        System.out.println(result);
     }
 }
