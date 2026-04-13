@@ -1,19 +1,16 @@
-public class UC3 {
+public class UC4Hello {
+
     public static void main(String[] args) {
-
         if (args.length > 0) {
-            // Option A: use only the first word
-            System.out.println(args[0]);
-
-            // Option B (if you want full message):
-            // StringBuilder sb = new StringBuilder();
-            // for (int i = 0; i < args.length; i++) {
-            //     if (i > 0) sb.append(" ");
-            //     sb.append(args[i]);
-            // }
-            // System.out.println(sb.toString());
+            // Print "Hello" + all command-line arguments
+            System.out.print("Hello");
+            for (String arg : args) {
+                System.out.print(" " + arg);
+            }
+            System.out.println();
         } else {
-            System.out.println("Hello World"); // default message
+            // Default message when no arguments are passed
+            System.out.println("Hello, World!");
         }
     }
 }
